@@ -18,7 +18,7 @@ function outer () {
 
 outer();
 
-/* var length = 10;
+var length = 10;
 function fn () {
   console.log(this)
   console.log(this.length);
@@ -30,4 +30,4 @@ var obj = {
     arguments[0]();
   }
 };
-obj.method(fn, 1); */
+obj.method(fn, 1);
