@@ -5,5 +5,5 @@ console.log(a.__proto__)
 console.log(a.prototype.find()) */
 
 for (var i = 1; i < 5; i++) {
-  setTimeout(() => console.log(i), 1000)
+  setTimeout(() => console.log(i), 1000);
 }

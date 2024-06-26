@@ -10,12 +10,12 @@ const obj = {
 }
 
 
-Function.prototype.myBind = function (obj) {
+/* Function.prototype.myBind = function (obj) {
     const fun = this
      return function(...args) {
         return fun.apply(obj, [...args])
      }
-}
+} */
 //const newFun = myFunction.bind(obj)
 const newFun = myFunction.myBind(obj)
 newFun('Demai', 'India')

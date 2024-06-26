@@ -1,4 +1,6 @@
 
+
+/** write map method of array */
 /* const arr = [1, 2, 3, 4];
 arr.newMap = (callback) => {
   const newArray = []
@@ -8,16 +10,17 @@ arr.newMap = (callback) => {
   return newArray
 }
 
-console.log(arr.newMap((e) => e + 1)); */
+console.log(arr.newMap((e) => e + 1));
+//  console.log(arr.map((e) => e + 1)); */
 
-/* function parentFun () {
-  var abc = 'parent'
+/* function parentFun() {
+  const abc = 'parent'
   const bcd = () => {
     console.log(abc)
   }
   bcd()
 }
-parentFun() */
+parentFun(); */
 
 /* const stringCalc = (numbers) => {
   const inputs = numbers.split(",")
@@ -33,8 +36,7 @@ parentFun() */
   }
   return total
 }
-
-console.log(stringCalc("1,2,3")) */
+console.log(stringCalculation("1,2,3")) */
 
 /* function abc () {
   var var1 = 5;
@@ -201,7 +203,7 @@ pr.then(
   }
 ) */
 
-var obj = {
+/* var obj = {
   fname: "vivek",
   getName: function () {
     console.log(a)
@@ -211,22 +213,42 @@ var obj = {
   }
 }
 obj.getName()
-console.log(a)
+console.log(a) */
 
-/* const promise = new Promise(res => res(2));
+const promise = new Promise(res => res(2));
 promise.then(v => {
-  console.log(v); // Promise
+  console.log(v); // 2
   return v * 2;
 })
   .then(v => {
-    console.log(v); // 2
+    console.log(v); // 4
     return v * 2;
   })
   .finally(v => {
-    console.log(v); // 4
+    console.log(v); // 8
     return v * 2;
   })
   .then(v => {
     console.log(v); // undefined
-  }); */
+  });
+
+
+let variable = new Promise((resolve, reject) => {
+  console.log('Parent Promise, should resolve after 3 seconds.');
+  setTimeout(() => { resolve(1) }, 3000);
+})
+  .then(data => {
+    console.log('1st then', data);
+    return 2;
+    /* return new Promise((resolve, reject) => {
+      console.log('1st then, resolves after 2 seconds.', data);
+      setTimeout(() => { resolve(2) }, 2000);
+    }); */
+  })
+  .finally(() => {
+    console.log('should resolve at the end.');
+  })
+  .then(data => {
+    console.log('2nd then, should resolve after first promise.', data);
+  });
 
