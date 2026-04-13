@@ -1,0 +1,62 @@
+{
+  "admin": {
+    "permissions": [
+      {
+        "users": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": true
+        }
+      },
+      {
+        "posts": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": true
+        }
+      }
+    ]
+  },
+  "editor": {
+    "permissions": [
+      {
+        "users": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        }
+      },
+      {
+        "posts": {
+          "create": true,
+          "read": true,
+          "update": true,
+          "delete": false
+        }
+      }
+    ]
+  },
+  "intern": {
+    "permissions": [
+      {
+        "users": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        }
+      },
+      {
+        "posts": {
+          "create": false,
+          "read": true,
+          "update": false,
+          "delete": false
+        }
+      }
+    ]
+  }
+}
